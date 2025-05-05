@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Winning Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      background: radial-gradient(circle at top, #0a0f2c, #020617);
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: twinkle 2s infinite ease-in-out;
+      box-shadow: 0 0 6px white, 0 0 12px #00faff;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.8); }
+    }
+
+    .container {
+      text-align: center;
+      padding-top: 30px;
+      flex: 1;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo {
+      width: 200px;
+      border-radius: 75%;
+      border: 2px solid #00bfff;
+      box-shadow: 0 0 12px #00bfff;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin: 15px 0;
+      color: #cfff04;
+      letter-spacing: 1px;
+      text-shadow: 0 0 8px #cfff04;
+    }
+
+    .join-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 15px 40px;
+      font-size: 16px;
+      background: #1e90ff;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 0 12px #1e90ff, 0 0 30px #1e90ff77;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .join-btn:hover {
+      background: #0078d4;
+      transform: scale(1.05);
+    }
+
+    .quote {
+      margin-top: 20px;
+      font-size: 23px;
+      color: #cfff04;
+      padding: 0 10px;
+    }
+
+    .bottom-box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      z-index: 1;
+      position: relative;
+    }
+
+    .image-box {
+      flex: 1 1 50%;
+      height: 350px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-top: 1px solid #00bfff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(3px);
+    }
+
+    .image-box img {
+      max-height: 300px;
+      max-width: 95%;
+      border-radius: 8px;
+      box-shadow: 0 0 8px #00d4ff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stars">
+    <script>
+      for (let i = 0; i < 300; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.top = `${Math.random() * 100}vh`;
+        star.style.left = `${Math.random() * 100}vw`;
+        const size = Math.random() * 2 + 1;
+        star.style.width = star.style.height = `${size}px`;
+        star.style.animationDelay = `${Math.random() * 5}s`;
+        document.querySelector('.stars').appendChild(star);
+      }
+    </script>
+  </div>
+
+  <div class="container">
+    <img src="https://assets.onecompiler.app/4337ujhn4/43gue4mcw/1000027558.jpg" class="logo" alt="Telegram Logo">
+    <h1>WINNING ZONE</h1>
+    <a href="https://shorturl.at/FuPgI" target="_blank" class="join-btn">JOIN</a>
+    <div class="quote">“Don’t wait for luck. Join the Winning Zone and create it.”</div>
+  </div>
+
+  <div class="bottom-box">
+    <div class="image-box">
+      <img src="https://assets.onecompiler.app/4337ujhn4/43gugjzdv/1000027562.jpg" alt="Image 1">
+    </div>
+    <div class="image-box">
+      <img src="https://assets.onecompiler.app/4337ujhn4/43gue4mcw/1000027559.jpg" alt="Image 2">
+    </div>
+  </div>
+
+</body>
+</html>
