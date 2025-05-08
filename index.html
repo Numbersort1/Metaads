@@ -1,160 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Winning Zone</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Winning Zone - TC LOTTERY</title>
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      height: 100vh;
-      background: radial-gradient(circle at top, #0a0f2c, #020617);
-      font-family: 'Segoe UI', sans-serif;
-      overflow: hidden;
-      color: white;
+      font-family: 'orbiton', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .stars {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      overflow: hidden;
-    }
-
-    .star {
-      position: absolute;
-      background: white;
-      border-radius: 50%;
-      opacity: 0.7;
-      animation: twinkle 2s infinite ease-in-out;
-      box-shadow: 0 0 6px white, 0 0 12px #00faff;
-    }
-
-    @keyframes twinkle {
-      0%, 100% { opacity: 0.3; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.8); }
-    }
-
-    .container {
-      text-align: center;
-      padding-top: 30px;
-      flex: 1;
-      position: relative;
-      z-index: 1;
-    }
-
-    .logo {
-      width: 200px;
-      border-radius: 75%;
-      border: 2px solid #00bfff;
-      box-shadow: 0 0 12px #00bfff;
-    }
-
-    h1 {
-      font-size: 38px;
-      margin: 15px 0;
-      color: #cfff04;
-      letter-spacing: 1px;
-      text-shadow: 0 0 8px #cfff04;
-    }
-
-    .join-btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 15px 40px;
-      font-size: 16px;
-      background: #1e90ff;
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      box-shadow: 0 0 12px #1e90ff, 0 0 30px #1e90ff77;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-
-    .join-btn:hover {
-      background: #0078d4;
-      transform: scale(1.05);
-    }
-
-    .quote {
-      margin-top: 20px;
-      font-size: 23px;
-      color: #cfff04;
-      padding: 0 10px;
-    }
-
-    .bottom-box {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      z-index: 1;
-      position: relative;
-    }
-
-    .image-box {
-      flex: 1 1 50%;
-      height: 350px;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-top: 1px solid #00bfff;
-      display: flex;
       align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(3px);
-    }
+      text-align: center;
+    }.logo {
+  margin-top: 40px;
+}
 
-    .image-box img {
-      max-height: 300px;
-      max-width: 95%;
-      border-radius: 8px;
-      box-shadow: 0 0 8px #00d4ff;
-    }
+.logo img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 20px 0 10px;
+  color: #00f9ff;
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  font-size: 1.4em;
+  font-weight: 300;
+  color: #ffffffaa;
+}.button {
+      padding: 10px 20px;
+  background: #00ffc6;
+  color: #000;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: #0ff;
+}.features {
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 90%;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.3);
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+  color: #00ffd5;
+  font-size: 1.2em;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h4 {
+  font-size: 1.3em;
+  color: #00ffae;
+}
+
+.stat p {
+  font-size: 1em;
+  color: #ccc;
+}
+
+.cta {
+  margin-top: 40px;
+}
+
+.cta a {
+  padding: 15px 30px;
+  background: #00ffc6;
+  color: #000;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: background 0.3s;
+}
+
+.cta a:hover {
+  background: #0ff;
+}
+
+@media (min-width: 600px) {
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
   </style>
 </head>
 <body>
-
-  <div class="stars">
-    <script>
-      for (let i = 0; i < 300; i++) {
-        const star = document.createElement('div');
-        star.classList.add('star');
-        star.style.top = `${Math.random() * 100}vh`;
-        star.style.left = `${Math.random() * 100}vw`;
-        const size = Math.random() * 2 + 1;
-        star.style.width = star.style.height = `${size}px`;
-        star.style.animationDelay = `${Math.random() * 5}s`;
-        document.querySelector('.stars').appendChild(star);
-      }
-    </script>
+  <div class="logo">
+    <img src="file:///storage/emulated/0/Venter/HopWeb/Projects/WEB/IMG_20250507_210432_521.jpg" alt="Winning Zone Logo">
   </div>
-
-  <div class="container">
-    <img src="https://assets.onecompiler.app/4337ujhn4/43gue4mcw/1000027558.jpg" class="logo" alt="Telegram Logo">
-    <h1>WINNING ZONE</h1>
-    <a href="https://shorturl.at/FuPgI" target="_blank" class="join-btn">JOIN</a>
-    <div class="quote">“Don’t wait for luck. Join the Winning Zone and create it.”</div>
-  </div>
-
-  <div class="bottom-box">
-    <div class="image-box">
-      <img src="https://assets.onecompiler.app/4337ujhn4/43gugjzdv/1000027562.jpg" alt="Image 1">
+  <h1>WINNING ZONE</h1>
+    <div class="h2"></div>
+    <a class="button" href="https://t.me/+2g-4KM3vHOhiNTE9" target="_blank" onclick="fbq('track', 'Lead');">Join Now on Telegram</a>
+  <h2>TC LOTTERY COLOR PLATFORM</h2>  <div class="features">
+    <div class="feature">
+      <h3>Trusted Predictions</h3>
+      <p>Accurate signals for color trading daily.</p>
     </div>
-    <div class="image-box">
-      <img src="https://assets.onecompiler.app/4337ujhn4/43gue4mcw/1000027559.jpg" alt="Image 2">
+    <div class="feature">
+      <h3>Easy & Fast Withdraw</h3>
+      <p>Instant withdrawal process with no delays.</p>
     </div>
+    <div class="feature">
+      <h3>24/7 Support</h3>
+      <p>Join and get help anytime from our expert team.</p>
+    </div>
+  </div>  <div class="stats">
+    <div class="stat">
+      <h4>10K+</h4>
+      <p>Users</p>
+    </div>
+    <div class="stat">
+      <h4>1 Cr+</h4>
+      <p>Win Amount</p>
+    </div>
+    <div class="stat">
+      <h4>300+</h4>
+      <p>Online Users</p>
+    </div>
+  </div>  <div class="cta">
+    <a href="https://t.me/+2g-4KM3vHOhiNTE9" target="_blank">Join Now on Telegram</a>
   </div>
-
 </body>
 </html>
